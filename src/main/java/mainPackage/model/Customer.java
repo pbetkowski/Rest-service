@@ -8,18 +8,18 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "userdata")
+@Table(name = "klienci")
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Customer {
     @javax.persistence.Id
-    @Column(name = "Id")
+    @Column(name = "id_klient")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer Id;
 
-    @Column(name = "Name")
+    @Column(name = "imie")
     String Name;
-    @Column(name = "Surname")
+    @Column(name = "nazwisko")
     String Surname;
 
 }

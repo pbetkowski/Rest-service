@@ -1,7 +1,7 @@
 package mainPackage.controller;
 
-import mainPackage.model.User;
-import mainPackage.service.UserRepository;
+import mainPackage.model.Customer;
+import mainPackage.service.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,15 +11,15 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @CrossOrigin
-public class UserController {
+public class CustomerController {
 
     @Autowired
-    UserRepository userRepo;
+    CustomerRepository customerRepository;
 
 
-    @RequestMapping(value = "/users", method = GET)
-    public Iterable<User> getUsers() {
-        return userRepo.findAll();
+    @RequestMapping(value = "/customers", method = GET)
+    public Iterable<Customer> getUsers() {
+        return customerRepository.findAll();
     }
 
 }
