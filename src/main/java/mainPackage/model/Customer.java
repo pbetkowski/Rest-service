@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,11 +16,11 @@ public class Customer {
     @javax.persistence.Id
     @Column(name = "id_klient")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer Id;
+    Integer id;
 
     @Column(name = "imie")
-    String Name;
+    String imie;
     @Column(name = "nazwisko")
-    String Surname;
+    String nazwisko;
 
 }
