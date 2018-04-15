@@ -31,15 +31,13 @@ public class CustomerController {
 
     @RequestMapping(value = "/customerList", method = GET)
     @ResponseBody
-    public Map<String, List<Customer>> customerList ()
+    public List<Customer> customerList ()
     {
         List<Customer> list = new ArrayList<>();
-        Map<String, List<Customer>> map = new HashMap<>();
         for (int i = 1; i <customerRepository.count()+1; i++) {
             list.add(customerRepository.findOne(i));
         }
-        map.put("Customers", list);
-        return map;
+        return list;
     }
 
     @RequestMapping(value = "/size", method = GET)
