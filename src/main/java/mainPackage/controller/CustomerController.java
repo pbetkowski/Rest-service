@@ -32,6 +32,8 @@ public class CustomerController {
 
     @RequestMapping(value = "/customerList", method = GET)
     @ResponseBody
+
+
     public List<Customer> customerList ()
     {
         List<Customer> list = new ArrayList<>();
