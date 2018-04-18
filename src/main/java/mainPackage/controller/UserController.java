@@ -29,12 +29,12 @@ public class UserController {
 
     //http://localhost:8443/create_user?name=Jan&surname=Janowski&pesel=88355552
     @RequestMapping(name = "/createUser", method = GET)
-    public User createUser(@RequestParam(value = "name") String name,
-                           @RequestParam(value = "surname") String surname,
+    public User createUser(@RequestParam(value = "login") String login,
+                           @RequestParam(value = "password") String password,
                            @RequestParam(value = "pesel") String pesel
                            )
     {
-        User newUser = new User(null, name, surname, pesel);
+        User newUser = new User(null, login, password, pesel);
         return userRepository.save(newUser);
     }
 }

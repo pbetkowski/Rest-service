@@ -19,16 +19,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
-    @Column(name = "name")
+    @Column(name = "login")
 
-    String name;
-    @Column(name = "surname")
-    String surname;
+    String login;
+    @Column(name = "password")
+    String password;
 
     @Column(name = "pesel")
     String pesel;
 
 
-    public User(Object o, String name, String surname, String pesel) {
+    public User(Object o, String login, String password, String pesel) {
     }
 }
