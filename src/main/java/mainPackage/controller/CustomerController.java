@@ -31,16 +31,9 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/customerList", method = GET)
-    @ResponseBody
-
-
     public List<Customer> customerList ()
     {
-        List<Customer> list = new ArrayList<>();
-        for (int i = 1; i <customerRepository.count()+1; i++) {
-            list.add(customerRepository.findOne(i));
-        }
-        return list;
+        return customerRepository.findAll();
     }
     @Scheduled(fixedRate = 60000)
     @RequestMapping(value = "/size", method = GET)
