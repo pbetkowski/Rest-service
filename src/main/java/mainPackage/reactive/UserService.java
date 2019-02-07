@@ -3,6 +3,7 @@ package mainPackage.reactive;
 
 import lombok.AllArgsConstructor;
 import mainPackage.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
@@ -10,6 +11,7 @@ import reactor.core.publisher.Flux;
 @AllArgsConstructor
 public class UserService {
 
+    @Autowired
     private UserConnector userConnector;
 
 
