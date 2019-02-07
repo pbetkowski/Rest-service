@@ -28,7 +28,4 @@ public class User {
     @Column(name = "pesel")
     String pesel;
 
-
-    public User(Object o, String login, String password, String pesel) {
-    }
 }
